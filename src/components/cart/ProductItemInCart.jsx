@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./ProductItemInCart.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { AppContext } from "../../context/AppContext";
+
 function ProductItemInCart({ id, name, price, image, count, totalPrice }) {
   const { dispatch } = useContext(AppContext);
 
@@ -9,13 +10,7 @@ function ProductItemInCart({ id, name, price, image, count, totalPrice }) {
 
   const increaseHandler = () => dispatch({ type: "INCREASE_IN_CART", id });
 
-  const removeFromCartHandler = () => {
-    // const updateAddedProducts = addedProducts.filter(
-    //   (product) => product.id !== id
-    // );
-    // setAddedProducts(updateAddedProducts);
-    // setAddedToCart(addedToCart - 1);
-  };
+  const removeHandler = () => dispatch({ type: "REMOVE_FROM_CART", id });
 
   return (
     <div className="productItemInCart">
@@ -27,7 +22,7 @@ function ProductItemInCart({ id, name, price, image, count, totalPrice }) {
         {count > 1 ? (
           <button onClick={decreaseHandler}>-</button>
         ) : (
-          <button onClick={removeFromCartHandler}>
+          <button onClick={removeHandler}>
             <RiDeleteBin6Line />
           </button>
         )}
