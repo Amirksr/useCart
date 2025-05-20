@@ -15,18 +15,25 @@ const reducer = (state, action) => {
           }
         });
       } else {
-        newState.addedToCart += 1;
         newState.addedProducts.push({
           ...action.data,
           count: 1,
           totalPrice: price,
         });
+        newState.addedToCart += 1;
       }
 
       return newState;
     }
     case "INCREASE_IN_CART": {
-      //code
+      const newState = { ...state };
+      newState.addedProducts.map((product) => {
+        if (product.id == action.id) {
+          product.count += 1;
+          product.totalPrice = product.count * product.price;
+        }
+      });
+      return newState;
     }
     case "DECREASE_IN_CART": {
       //code
