@@ -5,7 +5,25 @@ export const AppContext = createContext();
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART": {
-      //code
+      const { id, price } = action.data;
+      const newState = { ...state };
+      if (newState.addedProducts.some((product) => product.id == id)) {
+        newState.addedProducts.map((product) => {
+          if (product.id == id) {
+            product.count += 1;
+            product.totalPrice = product.count * product.price;
+          }
+        });
+      } else {
+        newState.addedToCart += 1;
+        newState.addedProducts.push({
+          ...action.data,
+          count: 1,
+          totalPrice: price,
+        });
+      }
+
+      return newState;
     }
     case "INCREASE_IN_CART": {
       //code
