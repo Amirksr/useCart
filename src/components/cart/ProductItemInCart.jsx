@@ -5,27 +5,9 @@ import { AppContext } from "../../context/AppContext";
 function ProductItemInCart({ id, name, price, image, count, totalPrice }) {
   const { dispatch } = useContext(AppContext);
 
-  const decreaseHandler = () => {
-    // const updateAddedProducts = [...addedProducts];
-    // updateAddedProducts.map((product) => {
-    //   if (product.id == id) {
-    //     product.count -= 1;
-    //     product.totalPrice = product.count * product.price;
-    //     setAddedProducts(updateAddedProducts);
-    //   }
-    // });
-  };
-  const increaseHandler = () => {
-    dispatch({ type: "INCREASE_IN_CART", id });
-    // const updateAddedProducts = [...addedProducts];
-    // updateAddedProducts.map((product) => {
-    //   if (product.id == id) {
-    //     product.count += 1;
-    //     product.totalPrice = product.count * product.price;
-    //     setAddedProducts(updateAddedProducts);
-    //   }
-    // });
-  };
+  const decreaseHandler = () => dispatch({ type: "DECREASE_IN_CART", id });
+
+  const increaseHandler = () => dispatch({ type: "INCREASE_IN_CART", id });
 
   const removeFromCartHandler = () => {
     // const updateAddedProducts = addedProducts.filter(

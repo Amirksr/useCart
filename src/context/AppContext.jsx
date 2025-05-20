@@ -36,7 +36,14 @@ const reducer = (state, action) => {
       return newState;
     }
     case "DECREASE_IN_CART": {
-      //code
+      const newState = { ...state };
+      newState.addedProducts.map((product) => {
+        if (product.id == action.id) {
+          product.count -= 1;
+          product.totalPrice = product.count * product.price;
+        }
+      });
+      return newState;
     }
     case "REMOVE_FROM_CART": {
       //code
