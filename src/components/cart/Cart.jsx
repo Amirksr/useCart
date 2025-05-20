@@ -4,8 +4,7 @@ import ProductItemInCart from "./ProductItemInCart";
 import { AppContext } from "../../context/AppContext";
 
 function Cart() {
-
-  const {addedToCart , addedProducts} = useContext(AppContext)
+  const { addedToCart, addedProducts } = useContext(AppContext).state;
   return (
     <div className="cartContainer">
       {addedToCart > 0 ? (
