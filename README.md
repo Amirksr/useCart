@@ -1,32 +1,35 @@
-# 🛒 Cart Context Project
+# 🛒 useCart – Manage Cart State with React & useReducer
 
-Shopping cart state management in React using Context API and Vite
+A clean and modern React project for managing shopping cart state using Context API and `useReducer` instead of `useState`. The goal of this project is to separate the JSX structure from logic by organizing state management more efficiently.
 
-## ✨ Overview
+🔗 **Live Demo:** [use-cart.vercel.app](https://use-cart.vercel.app)
 
-This is a simple shopping cart example built with React, using the **Context API** for global state management. The goal of this project is to demonstrate how to manage a shopping cart's state across components in a clean and modular way using React Context.
+---
 
-## 🔗 Live Demo
+## ✨ Features
 
-Check out the live version of the project:
+- Replace `useState` with `useReducer` for better state management
+- Clear separation between action logic and UI components
+- Well-structured and scalable folder organization
+- Built with Vite for lightning-fast development
+- ESLint support for consistent code quality
 
-👉 [View Demo](https://cart-context-eta.vercel.app)
+---
 
-## ⚙️ Technologies Used
-
-- **React** – UI library for building the frontend
-- **Context API** – for managing global state (cart functionality)
-- **Vite** – fast and modern build tool
-- **ESLint** – for code quality and consistency
-
-## 🧩 Project Structure
+## 📁 Project Structure
 
 ```
-cartContext/
+useCart/
 ├── public/
+│   └── index.html
 ├── src/
 │   ├── components/
+│   │   ├── Cart.jsx
+│   │   └── ProductList.jsx
 │   ├── context/
+│   │   └── CartContext.jsx
+│   ├── reducer/
+│   │   └── cartReducer.js
 │   ├── App.jsx
 │   └── main.jsx
 ├── package.json
@@ -34,44 +37,58 @@ cartContext/
 └── README.md
 ```
 
-## 🚀 Getting Started
+---
 
-To run the project locally, follow these steps:
+## ⚙️ Technologies Used
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Context API](https://reactjs.org/docs/context.html)
+- [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
+- [ESLint](https://eslint.org/)
+
+---
+
+## 🚀 Getting Started
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/Amirksr/cartContext.git
-   cd cartContext
-   ```
+```bash
+git clone https://github.com/Amirksr/useCart.git
+cd useCart
+```
 
 2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. Start the development server:
+3. Run the development server:
 
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
-   The app will be available at `http://localhost:5173`.
+Visit `http://localhost:5173` in your browser.
+
+---
 
 ## 📦 Available Scripts
 
-- `npm run dev` – run the app in development mode
-- `npm run build` – build the app for production
-- `npm run preview` – preview the production build
+- `npm run dev` – Start the development server
+- `npm run build` – Build for production
+- `npm run preview` – Preview the production build
 
-## 🧠 Features
+---
 
-- Global state management using React Context
-- Add and remove items from the cart
-- Update item quantities dynamically
-- Modular and maintainable component structure
+## 🔗 Links
+
+- GitHub Repository: [github.com/Amirksr/useCart](https://github.com/Amirksr/useCart)
+- Live Demo: [use-cart.vercel.app](https://use-cart.vercel.app)
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License.
