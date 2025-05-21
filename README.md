@@ -27,14 +27,19 @@ useCart/
 │   │   ├── Cart.jsx
 │   │   └── ProductList.jsx
 │   ├── context/
-│   │   └── CartContext.jsx
+│   │   └── AppContext.jsx
 │   ├── reducer/
-│   │   └── cartReducer.js
+│   │   └── reducer.js
 │   ├── App.jsx
-│   └── main.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
 ├── package.json
-├── vite.config.js
-└── README.md
+└── vite.config.js
 ```
 
 ---
@@ -77,18 +82,4 @@ Visit `http://localhost:5173` in your browser.
 ## 📦 Available Scripts
 
 - `npm run dev` – Start the development server
-- `npm run build` – Build for production
-- `npm run preview` – Preview the production build
-
----
-
-## 🔗 Links
-
-- GitHub Repository: [github.com/Amirksr/useCart](https://github.com/Amirksr/useCart)
-- Live Demo: [use-cart.vercel.app](https://use-cart.vercel.app)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+-
